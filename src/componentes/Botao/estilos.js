@@ -15,5 +15,5 @@ export default StyleSheet.create({
     fontFamily: "Roboto",
     fontWeight: "700",
     color: "#fff",
-  }
+  },
 });
