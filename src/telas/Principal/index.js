@@ -10,7 +10,10 @@ import { BotaoProduto } from "../../componentes/BotaoProduto";
 import Cabecalho from "../../componentes/Cabecalho";
 import Produto from "../../componentes/Produtos";
 import { auth } from "../../config/firebase";
-import { pegarProdutos } from "../../servicos/firestore";
+import {
+  pegarProdutos,
+  pegarProdutosEmTempoReal,
+} from "../../servicos/firestore";
 import estilos from "./estilos";
 
 export default function Principal({ navigation }) {
@@ -27,7 +30,8 @@ export default function Principal({ navigation }) {
   }
 
   useEffect(() => {
-    carregarDadosProdutos();
+    //   carregarDadosProdutos();
+    pegarProdutosEmTempoReal(setProdutos);
   }, []);
 
   function deslogar() {
